@@ -7,9 +7,28 @@
 
 import UIKit
 
+class ImageCellController {
+    var view: UITableViewCell?
+    private let item: FeedItem
+    
+    init(item: FeedItem) {
+        self.item = item
+    }
+    
+    func view(_ tableView: UITableView) -> UITableViewCell {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "FeedImageCell") as! FeedImageCell
+        cell.feedImageView.image = UIImage(named: item.image)
+        cell.usernameLabel.text = item.username
+        cell.dateLabel.text = item.date
+        cell.descriptionLabel.text = item.description
+        return cell
+    }
+    
+}
+
 class FeedViewController: UITableViewController {
     
-    var dataSource: [FeedItem] = [] {
+    var dataSource: [ImageCellController] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -20,9 +39,6 @@ class FeedViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        APIService.shared.loadFeed {[weak self] feed in
-            self?.dataSource = feed
-        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,13 +46,8 @@ class FeedViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "FeedImageCell") as! FeedImageCell
-        let item = dataSource[indexPath.row]
-        cell.feedImageView.image = UIImage(named: item.image)
-        cell.usernameLabel.text = item.username
-        cell.dateLabel.text = item.date
-        cell.descriptionLabel.text = item.description
-        return cell
+        let cellController = dataSource[indexPath.row]
+        return cellController.view(tableView)
     }
     
 }
