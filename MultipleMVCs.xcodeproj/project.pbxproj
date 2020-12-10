@@ -59,12 +59,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		BD21FF842581CD680057FB3E /* Model */ = {
+		BD21FF842581CD680057FB3E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				BD792D4D258067B9002AEA83 /* FeedItem.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BD21FF852581CD6E0057FB3E /* Networking */ = {
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				BD21FF852581CD6E0057FB3E /* Networking */,
-				BD21FF842581CD680057FB3E /* Model */,
+				BD21FF842581CD680057FB3E /* Models */,
 				BD21FF812581CD5A0057FB3E /* Views */,
 				BD21FF802581CD510057FB3E /* Controllers */,
 				BD792D292580628F002AEA83 /* AppDelegate.swift */,
