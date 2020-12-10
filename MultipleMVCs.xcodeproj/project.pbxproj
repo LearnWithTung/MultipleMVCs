@@ -14,7 +14,7 @@
 		BD792D3625806291002AEA83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD792D3425806291002AEA83 /* LaunchScreen.storyboard */; };
 		BD792D40258062BE002AEA83 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD792D3F258062BE002AEA83 /* FeedViewController.swift */; };
 		BD792D442580667D002AEA83 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD792D432580667D002AEA83 /* FeedImageCell.swift */; };
-		BD792D47258067A8002AEA83 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD792D46258067A8002AEA83 /* DummyData.swift */; };
+		BD792D47258067A8002AEA83 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD792D46258067A8002AEA83 /* APIService.swift */; };
 		BD792D4E258067B9002AEA83 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD792D4D258067B9002AEA83 /* FeedItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		BD792D3725806291002AEA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD792D3F258062BE002AEA83 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		BD792D432580667D002AEA83 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
-		BD792D46258067A8002AEA83 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		BD792D46258067A8002AEA83 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BD792D4D258067B9002AEA83 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +43,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD21FF802581CD510057FB3E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD792D3F258062BE002AEA83 /* FeedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BD21FF812581CD5A0057FB3E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD792D432580667D002AEA83 /* FeedImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD21FF842581CD680057FB3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD792D4D258067B9002AEA83 /* FeedItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD21FF852581CD6E0057FB3E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BD792D46258067A8002AEA83 /* APIService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		BD792D1D2580628F002AEA83 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +94,16 @@
 		BD792D282580628F002AEA83 /* MultipleMVCs */ = {
 			isa = PBXGroup;
 			children = (
+				BD21FF852581CD6E0057FB3E /* Networking */,
+				BD21FF842581CD680057FB3E /* Model */,
+				BD21FF812581CD5A0057FB3E /* Views */,
+				BD21FF802581CD510057FB3E /* Controllers */,
 				BD792D292580628F002AEA83 /* AppDelegate.swift */,
 				BD792D2B2580628F002AEA83 /* SceneDelegate.swift */,
-				BD792D3F258062BE002AEA83 /* FeedViewController.swift */,
 				BD792D2F2580628F002AEA83 /* Main.storyboard */,
 				BD792D3225806291002AEA83 /* Assets.xcassets */,
 				BD792D3425806291002AEA83 /* LaunchScreen.storyboard */,
 				BD792D3725806291002AEA83 /* Info.plist */,
-				BD792D432580667D002AEA83 /* FeedImageCell.swift */,
-				BD792D46258067A8002AEA83 /* DummyData.swift */,
-				BD792D4D258067B9002AEA83 /* FeedItem.swift */,
 			);
 			path = MultipleMVCs;
 			sourceTree = "<group>";
@@ -150,7 +182,7 @@
 				BD792D442580667D002AEA83 /* FeedImageCell.swift in Sources */,
 				BD792D4E258067B9002AEA83 /* FeedItem.swift in Sources */,
 				BD792D40258062BE002AEA83 /* FeedViewController.swift in Sources */,
-				BD792D47258067A8002AEA83 /* DummyData.swift in Sources */,
+				BD792D47258067A8002AEA83 /* APIService.swift in Sources */,
 				BD792D2C2580628F002AEA83 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
